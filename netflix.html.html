@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="netflixstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
-    <div class="main">
+    <!-- <div class="main">
         <nav>
             <span><img width="53" src="logo.svg" alt=""></span>
             <div>
@@ -30,7 +32,24 @@
                 <input type="text" placeholder="Email Address">
                 <button class="btn btn-red">Get Started ></button>
             </div>
+        </div> -->
+        <div class="main">
+    <div class="box"></div>
+    <nav>
+        <img src="logo.png" alt="Netflix Logo">
+        <button class="btn btn-red-sm">Sign In</button>
+    </nav>
+    <div class="hero">
+        <span>Unlimited movies, TV shows and more</span>
+        <span>Watch anywhere. Cancel anytime.</span>
+        <span>Ready to watch? Enter your email to create or restart your membership.</span>
+        <div class="hero-buttons">
+            <input type="text" placeholder="Email address">
+            <button class="btn btn-red">Get Started &gt;</button>
         </div>
+    </div>
+</div>
+
 
         <div class="seperation"></div>
 
@@ -98,63 +117,99 @@
 
 
     <section class="faq">
-        <h2>Frequently Asked Question</h2>
-        <div class="faqbox">
-        <span>What is Netflix</span>
-        
-        
+    <h2>Frequently Asked Questions</h2>
 
-        </div>
-    </section>
-    <section class="faq">
-        <div class="faqbox">
+    <div class="faqbox">
+        <span>What is Netflix?</span>
+        <i class="fa-solid fa-plus"></i>
+        <div class="answer">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</div>
+    </div>
+
+    <div class="faqbox">
         <span>How much does Netflix cost?</span>
-    
+        <i class="fa-solid fa-plus"></i>
+        <div class="answer">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device for a fixed monthly fee. Plans range from ₹149 to ₹649 a month.</div>
+    </div>
 
-        </div>
-    </section>
-
-    <section class="faq">
-        <div class="faqbox">
+    <div class="faqbox">
         <span>Where can I watch?</span>
-        
-        
+        <i class="fa-solid fa-plus"></i>
+        <div class="answer">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com or on your devices through the Netflix app.</div>
+    </div>
 
-        </div>
-    </section>
+    <div class="faqbox">
+        <span>How do I cancel?</span>
+        <i class="fa-solid fa-plus"></i>
+        <div class="answer">Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks.</div>
+    </div>
 
-    <section class="faq">
-        <div class="faqbox">
-        <span>How do I cancel??</span>
-        
-        
-
-        </div>
-    </section>
-
-    <section class="faq">
-        <div class="faqbox">
+    <div class="faqbox">
         <span>What can I watch on Netflix?</span>
-        
-        
+        <i class="fa-solid fa-plus"></i>
+        <div class="answer">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more.</div>
+    </div>
 
-        </div>
-    </section>
-
-    <section class="faq">
-        <div class="faqbox">
+    <div class="faqbox">
         <span>Is Netflix good for kids?</span>
-        
+        <i class="fa-solid fa-plus"></i>
+        <div class="answer">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies.</div>
+    </div>
+</section>
 
-        </div>
-    </section>
-    <div class="seperation"></div>
+<div class="seperation"></div>
 
-    <footer>
-        <div class="footer items">
-            <a href="FAQ">FAQ</a>
-        </div>
-    </footer>
+<footer class="netflix-footer">
+  <p class="call">Questions? Call <a href="tel:0008009191743">000-800-919-1743</a></p>
+
+  <div class="footer-grid">
+    <div class="footer-col">
+      <a href="#">FAQ</a>
+      <a href="#">Help Centre</a>
+      <a href="#">Account</a>
+      <a href="#">Media Centre</a>
+    </div>
+    <div class="footer-col">
+      <a href="#">Investor Relations</a>
+      <a href="#">Jobs</a>
+      <a href="#">Ways to Watch</a>
+      <a href="#">Terms of Use</a>
+    </div>
+    <div class="footer-col">
+      <a href="#">Privacy</a>
+      <a href="#">Cookie Preferences</a>
+      <a href="#">Corporate Information</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <a href="#">Speed Test</a>
+      <a href="#">Legal Notices</a>
+      <a href="#">Only on Netflix</a>
+    </div>
+  </div>
+
+  <div class="language-select">
+    <select>
+      <option>English</option>
+      <option>Hindi</option>
+    </select>
+  </div>
+
+  <p class="region">Netflix India</p>
+
+  <p class="captcha-notice">
+    This page is protected by Google reCAPTCHA to ensure you're not a bot.
+    <a href="#">Learn more.</a>
+  </p>
+</footer>
+
+
+<script>
+  document.querySelectorAll('.faqbox').forEach(faq => {
+    faq.addEventListener('click', () => {
+      faq.classList.toggle('open');
+    });
+  });
+</script>
 
  
 </body>

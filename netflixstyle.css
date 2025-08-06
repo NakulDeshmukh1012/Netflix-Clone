@@ -1,4 +1,4 @@
-* {
+/* * {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +52,7 @@ nav img {
     position: relative;
     gap: 23px;
     /* padding: 30px; */
-}
+/* }
 
 .hero> :nth-child(1) {
     font-weight: 900;
@@ -117,29 +117,199 @@ nav img {
     background-color: rgba(23, 23, 23, 0.7);
     border:1px solid rgba (246, 238, 238, 0.5)
 
+}  */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.first {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     max-width: 60vw; 
-    margin: auto;
+
+body {
+    background-color: black;
     color: white;
 }
-.secImg{
-    position: relative;
 
+.main {
+    background-image: url(bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    position: relative;
 }
-.secImg img {
-    width: 30vw;
+
+.main .box {
+    height: 90vh;
+    width: 100%;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+nav {
+    max-width: 75vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    padding-top: 1rem;
     position: relative;
     z-index: 10;
 }
-.secImg video {
-    position: absolute;
-    top: 41px;
-    right:0;
+
+nav img {
+    width: 150px;
+    z-index: 10;
 }
+
+.hero {
+    height: calc(100% - 62px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 5;
+}
+
+.hero> :nth-child(1) {
+    font-weight: 900;
+    font-size: 3rem;
+    max-width: 80%;
+}
+
+.hero> :nth-child(2) {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.hero> :nth-child(3) {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.main input {
+    padding: 1rem;
+    width: 300px;
+    max-width: 100%;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+}
+
+.main input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn {
+    padding: 0.5rem 1.2rem;
+    font-weight: 500;
+    color: white;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-red:hover {
+    background-color: #e50914;
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-red-sm:hover {
+    background-color: #e50914;
+}
+
+.seperation {
+    height: 7px;
+    background-color: rgb(48, 45, 45);
+    width: 100%;
+}
+
+.first {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  background-color: black;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.first > div:first-child {
+  flex: 1 1 500px;
+  font-size: 1.5rem;
+}
+
+.secImg {
+  position: relative;
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.secImg img {
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  position: relative;
+  display: block;
+}
+
+.secImg video {
+  position: absolute;
+  top: 20%;
+  left: 13.5%;
+  width: 73%;
+  height: 65%;
+  z-index: 0;
+  object-fit: cover;
+}
+
 section.first > div{
     display: flex;
     flex-direction: column;
@@ -152,27 +322,118 @@ section.first > div :nth-child(2){
     font-size: 15px;
 
 }
-.faq h2{
-    text-align: center;
-    font-size: 48px;
-}
 .faq {
-    background-color: black;
-    color:white;
-}
-.faqbox {
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(43, 41, 41);
-    padding: 34px;
-    max-width: 40vw;
-    margin:34px auto;
-}
-.faqbox:hover {
-    background-color: rgb(37, 36, 36);
+  background-color: black;
+  color: white;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr
+.faq h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faqbox {
+  background-color: #2d2d2d;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.faqbox:hover {
+  background-color: #414141;
+}
+
+.faqbox span {
+  display: block;
+}
+
+.faqbox i {
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.answer {
+  display: none;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #d3d3d3;
+  line-height: 1.5;
+}
+
+
+.faqbox.open .answer {
+  display: block;
+}
+
+.faqbox.open i {
+  transform: rotate(45deg);
+}
+.netflix-footer {
+  background-color: black;
+  color: #999;
+  padding: 3rem 2rem;
+  font-size: 0.9rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.netflix-footer a {
+  color: #999;
+  text-decoration: none;
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.netflix-footer a:hover {
+  text-decoration: underline;
+}
+
+.call {
+  margin-bottom: 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.language-select select {
+  background-color: transparent;
+  border: 1px solid #999;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.region {
+  margin: 1rem 0;
+  color: #999;
+}
+
+.captcha-notice {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.captcha-notice a {
+  color: #0071eb;
+  text-decoration: none;
+}
+
+.captcha-notice a:hover {
+  text-decoration: underline;
 }
